@@ -1,0 +1,10 @@
+<launch>
+  <group ns='script'>
+   <node name='pol' pkg='super_valery_study_pkg' type='pol.py' output='screen'/>
+   <node name='sum' pkg='super_valery_study_pkg' type='sum.py' output='screen'/>
+  </group>
+   <node name='req' pkg='super_valery_study_pkg' type='req.py' output='screen' >
+   <remap from='reqpol' to='script/reqpol' />
+   <remap from='sumreq' to='script/sumreq' />
+  </node>
+</launch>
